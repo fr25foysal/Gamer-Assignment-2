@@ -285,6 +285,7 @@ body{
     width: 55%;
 
 }
+
 .play-card .play-card-info{
     width: 45%;
     padding: 130px 0 0 180px;
@@ -307,10 +308,14 @@ body{
     line-height: 1.5rem;
 
 }
+
 .play-card-one .play-image-container .small-play-image{
+    position: absolute;
+    bottom: -20%;
     left: -20%;
 }
-.play-card .play-image-container .small-play-image{
+
+.play-card-two .play-image-container .small-play-image{
     position: absolute;
     bottom: -20%;
     right: -40%;
@@ -321,9 +326,7 @@ body{
 .play-card .play-image-container .small-play-image img{
     width: 70%;
 }
-.play-card-one .play-image-container .small-play-image img{
-    width: 23%;
-}
+
 /* The section Above doesn't fit on mobile device if I follow the rule of the figma design. So, I made some change to make it fit on Mobile devices*/
 
 .play-card-one{
@@ -331,19 +334,81 @@ body{
 }
 
 
-/* Mobile Device */
+/* Career styles */
+.career{
+    background-color: var(--pink);
+    padding: 0 0 0 12% ;
+    margin-top: 200px;
+    display: flex;
+
+
+}
+.career .career-info{
+    width: 50%;
+    margin: auto 0;
+}
+.career .career-img img{
+    width: 100%;
+}
+
+.career .career-info h2{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+}
+.career .career-info p{
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+.career-info .career-list{
+    display: flex;
+    justify-content: space-between;
+}
+.career-info .career-list ul{
+    padding: 0;
+    text-align: right;
+}
+.career-info .career-list ul:first-child{
+   
+    text-align: left;
+}
+.career-info .career-list ul li{
+    list-style: none;
+    padding-bottom: 10px;
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+.career-info button{
+    background-color: #FFF;
+    color: var(--pink);
+    margin-top: 20px;
+}
+
+
+/*----------------- Mobile Device------------------ */
 @media screen and (max-width: 576px) {
-    .nav-bar, .nav-bar nav ul, .banner-container, .team-container, .play-card {
+    .nav-bar, .nav-bar nav ul, .banner-container,
+     .team-container, .play-card, .career {
     flex-direction: column;
     height: auto;
     padding: 0;
     box-shadow: none;
     }
     
-    .banner-container ,.team-container, .play-card {
+    .banner-container ,.team-container,
+     .play-card, .career {
         padding: 40px 10%;
         margin: 0 auto;
         text-align: center;
+    }
+    .career{
+        margin-top: 100px;
     }
     .play-card {
         padding-top:0px ;
@@ -351,7 +416,11 @@ body{
     .nav-bar nav ul li:last-child{
         margin-top: 35px;
     }
-    .banner-container .banner-content, .banner-img , .team-container img, .play-card .play-card-info, .play-card .play-image-container {
+    .banner-container .banner-content,
+     .banner-img , .team-container img,
+      .play-card .play-card-info,
+       .play-card .play-image-container,
+        .career .career-info {
         width: 100%; 
     }
     .banner-container .banner-content, .play-image-container{
@@ -408,12 +477,17 @@ body{
     .play-card .play-card-info p{
         text-shadow: 0px 4px 4px rgba(99, 99, 99, 0.389);
     }
+    .career .career-img{
+        margin-top: 50px;
+    }
+    
     
 }
 
 /* Medium Device */
 @media screen and (min-width:576px ) and (max-width: 768px) {
-    .nav-bar, .nav-bar nav ul , .banner-container, .team-container, .play-card{
+    .nav-bar, .nav-bar nav ul , .banner-container,
+     .team-container, .play-card, .career{
         flex-direction: column;
         height: auto;
         padding: 0 0 30px 0;
@@ -421,7 +495,8 @@ body{
         .nav-bar nav ul li:last-child{
             margin-top: 35px;
         }
-        .banner-container, .team-container, .play-card{
+        .banner-container, .team-container,
+         .play-card, .career{
             padding: 40px 15%;
             margin: 0 auto;
             text-align: center;
@@ -429,8 +504,16 @@ body{
         .play-card{
             padding-top: 0;
         }
-        .banner-container .banner-content, .banner-img, .team-container img, .play-card .play-card-info, .play-card .play-card-info, .play-card .play-image-container {
+        .banner-container .banner-content,
+         .banner-img, .team-container img,
+          .play-card .play-card-info,
+           .play-card .play-card-info,
+            .play-card .play-image-container,
+             .career .career-info {
             width: 100%;
+        }
+        .career{
+            margin-top: 80px;
         }
 
         .banner-container .banner-content, .play-image-container{
@@ -476,6 +559,9 @@ body{
         }
         .play-card-one{
             margin-bottom: 50px;
+        }
+        .career .career-img{
+            margin-top: 50px;
         }
         
     
