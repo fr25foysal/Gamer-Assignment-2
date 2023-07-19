@@ -389,6 +389,41 @@ body{
     color: var(--pink);
     margin-top: 20px;
 }
+/* Game Name style */
+
+.game-names{
+    padding: 60px 12%;
+    background-color: #ffeef7;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px 20px;
+    justify-content: center;
+}
+
+.game-names .names{
+    display: flex;
+    border-radius: 50px;
+    padding: 0 10px;
+    align-items: center;
+    background-color: #FFF;
+    transition: all 0.2s;
+}
+.game-names .names img{
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.game-names .names h3{
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+.game-names .names:hover {
+    
+    outline: 3px solid #FF42A5;
+    color: #FF42A5;
+}
 
 
 /*----------------- Mobile Device------------------ */
@@ -402,7 +437,7 @@ body{
     }
     
     .banner-container ,.team-container,
-     .play-card, .career {
+     .play-card, .career, .game-names {
         padding: 40px 10%;
         margin: 0 auto;
         text-align: center;
@@ -480,6 +515,10 @@ body{
     .career .career-img{
         margin-top: 50px;
     }
+    .game-names{
+        grid-template-columns: 1fr 1fr;
+    }
+    
     
     
 }
@@ -487,7 +526,7 @@ body{
 /* Medium Device */
 @media screen and (min-width:576px ) and (max-width: 768px) {
     .nav-bar, .nav-bar nav ul , .banner-container,
-     .team-container, .play-card, .career{
+     .team-container, .play-card, .career {
         flex-direction: column;
         height: auto;
         padding: 0 0 30px 0;
@@ -496,7 +535,7 @@ body{
             margin-top: 35px;
         }
         .banner-container, .team-container,
-         .play-card, .career{
+         .play-card, .career, .game-names{
             padding: 40px 15%;
             margin: 0 auto;
             text-align: center;
@@ -562,6 +601,9 @@ body{
         }
         .career .career-img{
             margin-top: 50px;
+        }
+        .game-names{
+            grid-template-columns: 1fr 1fr 1fr; 
         }
         
     
